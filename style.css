@@ -35,7 +35,7 @@ svg {
 }
 
 .kick-pad.active {
-  background: rgb(36, 219, 255);
+  background: rgb(159, 239, 255);
 }
 
 .snare-pad.active {
@@ -102,12 +102,21 @@ svg {
   margin-top: 3rem;
   border-radius: 50px;
   width: 300px;
+  margin-top: 5.5rem;
+}
+
+.play.active {
+  background: rgb(182, 182, 182);
 }
 
 select {
   padding: 1rem;
   font-size: 1rem;
   border-radius: 50px;
+}
+
+.mute.active {
+  background: rgb(182, 182, 182);
 }
 
 .title {
