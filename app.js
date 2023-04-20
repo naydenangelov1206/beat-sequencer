@@ -8,6 +8,7 @@ class DrumKit {
     this.bpm = 150;
 
     this.index = 0;
+    this.isPlaying = null;
   }
 
   activePad() {
@@ -43,15 +44,31 @@ class DrumKit {
 
   start() {
     const interval = (60 / this.bpm) * 1000;
-    setInterval(() => {
-      this.repeat();
-    }, interval);
+    if (!this.isPlaying) {
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    } else {
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    }
+  }
+
+  updateButton() {
+    if (!this.isPlaying) {
+      this.playBtn.innerText = "Stop";
+      this.playBtn.classList.add("active");
+    } else {
+      this.playBtn.innerText = "Play";
+      this.playBtn.classList.remove("active");
+    }
   }
 }
 
 const drumKit = new DrumKit();
 
 drumKit.playBtn.addEventListener("click", () => {
+  drumKit.updateButton();
   drumKit.start();
 });
 
