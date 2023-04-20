@@ -24,9 +24,9 @@
                 </button>
 
                 <select name="kick-select" id="kick-select">
-                    <option value="">Classic Kick</option>
-                    <option value="">808 Kick</option>
-                    <option value="">Kick Heavy</option>
+                    <option value="./sounds/kick-classic.wav">Classic Kick</option>
+                    <option value="./sounds/kick-808.wav">808 Kick</option>
+                    <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
                 </select>
             </div>
 
@@ -50,9 +50,9 @@
                 </button>
 
                 <select name="snare-select" id="snare-select">
-                    <option value="">Classic Snare</option>
-                    <option value="">808 Snare</option>
-                    <option value="">Snare Vinyl</option>
+                    <option value="./sounds/snare-acoustic01.wav">Classic Snare</option>
+                    <option value="./sounds/snare-808.wav">808 Snare</option>
+                    <option value="./sounds/snare-vinyl02.wav">Snare Vinyl</option>
                 </select>
             </div>
 
@@ -76,8 +76,8 @@
                 </button>
 
                 <select name="hihat-select" id="hihat-select">
-                    <option value="">Hihat Acoustic</option>
-                    <option value="">808 Hihat</option>
+                    <option value="./sounds/hihat-808.wav">Hihat Acoustic</option>
+                    <option value="./sounds/hihat-acoustic01.wav">808 Hihat</option>
                 </select>
             </div>
 
@@ -96,9 +96,9 @@
         <button class="play">Play</button>
     </div>
 
-    <audio class="kick-sound"></audio>
-    <audio class="snare-sound"></audio>
-    <audio class="hihat-sound"></audio>
+    <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
+    <audio class="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
+    <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
